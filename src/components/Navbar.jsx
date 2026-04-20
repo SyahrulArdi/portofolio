@@ -13,14 +13,14 @@ const Navbar = () => {
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
-    
+
     // Initial theme check
     if (document.documentElement.classList.contains('dark')) {
       setIsDarkMode(true);
     } else {
       setIsDarkMode(false);
     }
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -49,15 +49,15 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'py-4 glass border-b border-black/5 dark:border-white/5 shadow-2xl backdrop-blur-md' : 'py-6 bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-4"
         >
-          <div className="w-12 h-12 bg-black/5 dark:bg-white/5 rounded-xl flex items-center justify-center neon-border-cyan group overflow-hidden border border-black/5 dark:border-white/10">
-             <img src={myLogo} alt="Logo" className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+          <div className="w-12 h-12 bg-black/5 dark:bg-white/5 rounded-full flex items-center justify-center neon-border-purple group overflow-hidden border border-black/5 dark:border-white/10">
+            <img src={myLogo} alt="Logo" className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
           </div>
-          <span className="text-xl font-bold tracking-tighter text-slate-900 dark:text-white uppercase italic hidden sm:block">PORT<span className="text-cyan-500">FOLIO.</span></span>
+          <span className="text-xl font-bold tracking-tighter text-purple-600 dark:text-purple-400 uppercase italic hidden sm:block">DARDCOR</span>
         </motion.div>
 
         <div className="hidden lg:flex items-center gap-8">
@@ -68,17 +68,17 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="text-[11px] font-black text-slate-600 dark:text-slate-300 hover:text-cyan-500 transition-colors uppercase tracking-[0.2em] relative group"
+              className="text-[11px] font-black text-slate-600 dark:text-slate-300 hover:text-purple-500 transition-colors uppercase tracking-[0.2em] relative group"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 transition-all group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full" />
             </motion.a>
           ))}
-          
+
           <div className="flex items-center gap-4 border-l border-black/10 dark:border-white/10 pl-8">
-            <button 
+            <button
               onClick={toggleTheme}
-              className="p-2.5 glass rounded-xl border border-black/5 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:text-cyan-500 hover:border-cyan-500/50 transition-all"
+              className="p-2.5 glass rounded-xl border border-black/5 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:text-purple-500 hover:border-purple-500/50 transition-all"
               aria-label="Toggle Theme"
             >
               {!isDarkMode ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
@@ -87,7 +87,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4 lg:hidden">
-          <button 
+          <button
             onClick={toggleTheme}
             className="p-2 glass rounded-lg border border-black/5 dark:border-white/10 text-slate-900 dark:text-white"
           >
@@ -113,7 +113,7 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-cyan-500 transition-colors uppercase tracking-widest"
+                  className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-purple-500 transition-colors uppercase tracking-widest"
                 >
                   {link.name}
                 </a>

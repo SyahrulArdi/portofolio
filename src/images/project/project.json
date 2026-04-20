@@ -1,0 +1,12 @@
+{
+    "project_1": {
+        "title": "Dardcor AI",
+        "link": "https://dardcor-ai.vercel.app",
+        "image": "project_1.png"
+    },
+    "project_2": {
+        "title": "Starz-shop",
+        "link": "https://louncher.github.io",
+        "image": "project_2.png"
+    }
+}

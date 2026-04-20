@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Heart, ArrowUpCircle, Github, Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
+import { Heart, ArrowUpCircle, Github, Linkedin, Instagram, Mail } from 'lucide-react';
+import socialData from '../link_media/link.json';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -9,33 +10,32 @@ const Footer = () => {
     };
 
     const socialLinks = [
-        { icon: <Github className="w-5 h-5" />, href: "#", color: "hover:text-white" },
-        { icon: <Linkedin className="w-5 h-5" />, href: "#", color: "hover:text-cyan-400" },
-        { icon: <Twitter className="w-5 h-5" />, href: "#", color: "hover:text-blue-400" },
-        { icon: <Instagram className="w-5 h-5" />, href: "#", color: "hover:text-pink-500" },
-        { icon: <Mail className="w-5 h-5" />, href: "mailto:contact@example.com", color: "hover:text-emerald-400" },
+        { icon: <Github className="w-5 h-5" />, href: socialData.github, color: "hover:text-white" },
+        { icon: <Linkedin className="w-5 h-5" />, href: socialData.linkedin, color: "hover:text-purple-400" },
+        { icon: <Instagram className="w-5 h-5" />, href: socialData.instagram, color: "hover:text-pink-500" },
+        { icon: <Mail className="w-5 h-5" />, href: `mailto:${socialData.mail}`, color: "hover:text-purple-400" },
     ];
 
     return (
-        <footer className="py-24 px-6 bg-slate-100 dark:bg-dark-950 border-t border-black/5 dark:border-white/5 relative z-10 overflow-hidden transition-colors duration-300">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
-            <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
+        <footer className="py-24 px-6 bg-transparent border-t border-black/5 dark:border-white/5 relative z-10 overflow-hidden transition-colors duration-300">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+            <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto flex flex-col items-center justify-center gap-16">
                 <motion.div
                     onClick={scrollToTop}
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-20 h-20 rounded-3xl glass border border-black/5 dark:border-white/10 flex items-center justify-center cursor-pointer hover:border-cyan-500/50 transition-all text-slate-500 hover:text-cyan-600 dark:hover:text-cyan-400 group shadow-2xl relative overflow-hidden"
+                    className="w-20 h-20 rounded-3xl glass border border-black/5 dark:border-white/10 flex items-center justify-center cursor-pointer hover:border-purple-500/50 transition-all text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 group shadow-2xl relative overflow-hidden"
                 >
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <ArrowUpCircle className="w-10 h-10 transition-all relative z-10" />
                 </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-12 items-center">
                     <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
-                        <span className="text-4xl font-black text-slate-900 dark:text-white tracking-tighter uppercase whitespace-nowrap italic">
-                            PORT<span className="text-cyan-500">FOLIO.</span>
+                        <span className="text-4xl font-black text-purple-600 dark:text-purple-400 tracking-tighter uppercase whitespace-nowrap italic">
+                            DARDCOR
                         </span>
                         <p className="text-slate-500 text-xs max-w-xs leading-relaxed font-bold uppercase tracking-[0.2em]">
                             Elevating Digital <span className="text-slate-900 dark:text-white">Experiences</span> through innovative code and design.
@@ -69,7 +69,7 @@ const Footer = () => {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-black/5 dark:via-white/5 to-transparent" />
 
                 <div className="flex flex-col md:flex-row items-center justify-between w-full text-[10px] font-bold text-slate-500 uppercase tracking-[0.4em] gap-8 px-4">
-                    <p>© {currentYear} Syahrul Ardi. All Rights Reserved.</p>
+                    <p>© {currentYear} Syahrul Ardi Prasetiyo. All Rights Reserved.</p>
                     <div className="flex items-center gap-3 bg-black/5 dark:bg-white/5 px-6 py-2.5 rounded-full border border-black/5 dark:border-white/5">
                         Crafted with <Heart className="w-3 h-3 text-red-500 fill-red-500 animate-pulse" /> by <span className="text-slate-900 dark:text-white">Syahrul</span>
                     </div>

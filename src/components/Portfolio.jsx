@@ -44,7 +44,7 @@ const Portfolio = () => {
     }, []);
 
     return (
-        <div className="min-h-screen selection:bg-cyan-500/30 selection:text-cyan-400 transition-colors duration-300 bg-white dark:bg-dark-900">
+        <div className="min-h-screen selection:bg-purple-500/30 selection:text-purple-400 transition-colors duration-300 bg-transparent">
             <Navbar />
             <main className="text-slate-900 dark:text-white transition-colors duration-300">
                 <Hero />
