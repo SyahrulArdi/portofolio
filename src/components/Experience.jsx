@@ -37,15 +37,15 @@ const Experience = () => {
             <div className="max-w-7xl mx-auto space-y-16">
                 <div className="flex flex-col items-center gap-4 text-center">
                     <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" />
-                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight uppercase tracking-tight">
+                    <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight uppercase tracking-tight px-4">
                         Riwayat <span className="text-purple-600 dark:text-purple-400">Kerja & Pendidikan</span>
                     </h2>
-                    <p className="max-w-2xl text-slate-600 dark:text-slate-400">
+                    <p className="max-w-2xl text-slate-600 dark:text-slate-400 text-sm md:text-base px-6">
                         Perjalanan profesional saya dalam membangun karier di bidang teknologi dan inovasi digital.
                     </p>
                 </div>
 
-                <div className="relative max-w-4xl mx-auto space-y-12 after:absolute after:inset-y-0 after:left-7 md:after:left-1/2 after:w-0.5 after:bg-slate-200 dark:after:bg-slate-800 after:hidden md:after:block">
+                <div className="relative max-w-4xl mx-auto space-y-12 after:absolute after:inset-y-0 after:left-7 md:after:left-1/2 after:w-0.5 after:bg-slate-200 dark:after:bg-slate-800 after:hidden md:after:block px-2 md:px-0">
                     {experiences.map((exp, idx) => (
                         <motion.div
                             key={exp.title + idx}

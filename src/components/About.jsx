@@ -33,15 +33,15 @@ const About = () => {
                         initial={{ opacity: 0, x: 50 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="w-full lg:w-1/2"
+                        className="w-full lg:w-1/2 text-center lg:text-left"
                     >
                         <h2 className="text-sm font-bold text-purple-600 dark:text-purple-500 uppercase tracking-[0.3em] mb-4">About Me</h2>
-                        <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
-                            Crafting High-Performance <br />
+                        <h3 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
+                            Crafting High-Performance <br className="hidden md:block" />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-500">Digital Solutions.</span>
                         </h3>
 
-                        <div className="space-y-6 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        <div className="space-y-6 text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed">
                             <p>
                                 Sebagai <span className="text-slate-900 dark:text-white font-semibold">Front-End Developer</span>, saya adalah arsitek di balik bagian visual dan interaktif dari sebuah aplikasi web. Fokus utama saya adalah menjembatani kesenjangan antara desain grafis dan implementasi teknis.
                             </p>

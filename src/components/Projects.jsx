@@ -16,13 +16,13 @@ const Projects = () => {
         <section id="projects" className="py-32 px-6 bg-transparent overflow-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto space-y-20">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-10">
-                    <div className="max-w-2xl space-y-6">
-                        <div className="flex items-center gap-3 text-purple-500 dark:text-purple-400 font-bold uppercase tracking-[0.3em] text-sm">
+                    <div className="max-w-2xl space-y-6 text-center md:text-left w-full">
+                        <div className="flex items-center justify-center md:justify-start gap-3 text-purple-500 dark:text-purple-400 font-bold uppercase tracking-[0.3em] text-sm">
                             <FolderCode className="w-5 h-5" />
                             <span>Selected Projects</span>
                         </div>
                         <h2 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white leading-tight">
-                            Digital <br />
+                            Digital <br className="hidden md:block" />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400">Creations.</span>
                         </h2>
                     </div>

@@ -17,19 +17,7 @@ const Hero = () => {
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl w-full gap-12 lg:gap-20">
                 {/* Text Content (Left Side) */}
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1 order-2 lg:order-1">
-                    {/* Badge */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="mb-8 inline-flex items-center gap-2 px-5 py-2 glass rounded-full border border-black/5 dark:border-white/5 shadow-xl"
-                    >
-                        <span className="relative flex h-3 w-3">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
-                        </span>
-                        <span className="text-sm font-bold tracking-[0.2em] text-purple-600 dark:text-purple-400 uppercase">Available for Work</span>
-                    </motion.div>
+
 
                     {/* Main Heading */}
                     <motion.div
@@ -38,16 +26,16 @@ const Hero = () => {
                         transition={{ delay: 0.4 }}
                         className="mb-8 space-y-4"
                     >
-                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+                        <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">
                             Hi, I'm <br className="hidden lg:block" />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-500 to-purple-600">Syahrul Ardi Prasetiyo</span>
                         </h1>
 
-                        <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300">
+                        <div className="text-xl md:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300">
                             <TypeAnimation
                                 sequence={[
                                     'I build Modern Websites', 2000,
-                                    'I design UI/UX Interfaces', 2000,
+                                    'I Frontend Developer', 2000,
                                     'I craft Digital Experiences', 2000,
                                 ]}
                                 speed={50}
@@ -62,7 +50,7 @@ const Hero = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        className="max-w-2xl text-slate-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed mb-12"
+                        className="max-w-2xl text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed mb-12 px-2"
                     >
                         A passionate Front-End Developer dedicated to building high-performance,
                         visually stunning, and user-centric web applications.
@@ -73,16 +61,16 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8 }}
-                        className="flex flex-col sm:flex-row gap-5 mb-14 w-full lg:justify-start justify-center"
+                        className="flex flex-col sm:flex-row gap-5 mb-14 w-full px-2 lg:px-0 lg:justify-start justify-center"
                     >
-                        <a href="#projects" className="group relative px-10 py-4 bg-purple-600 text-white dark:text-white rounded-full font-bold text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(147,51,234,0.4)]">
-                            <span className="relative z-10 flex items-center justify-center gap-2">
+                        <a href="#projects" className="group relative px-8 py-4 bg-purple-600 text-white dark:text-white rounded-full font-bold text-base md:text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(147,51,234,0.4)]">
+                            <span className="relative z-10 flex items-center justify-center gap-2 text-center">
                                 View My Work <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>
                             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                         </a>
 
-                        <button className="px-10 py-4 glass border border-black/5 dark:border-white/10 text-slate-900 dark:text-white rounded-full font-bold text-lg hover:bg-black/5 dark:hover:bg-white/5 transition-all flex items-center justify-center gap-2 shadow-xl hover:scale-105 active:scale-95">
+                        <button className="px-8 py-4 glass border border-black/5 dark:border-white/10 text-slate-900 dark:text-white rounded-full font-bold text-base md:text-lg hover:bg-black/5 dark:hover:bg-white/5 transition-all flex items-center justify-center gap-2 shadow-xl hover:scale-105 active:scale-95">
                             <Download className="w-5 h-5" /> Download CV
                         </button>
                     </motion.div>

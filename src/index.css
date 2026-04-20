@@ -25,33 +25,16 @@ html.dark body {
   color: #f5f3ff;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
+/* Hide scrollbar for all elements */
+*::-webkit-scrollbar {
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: #f5f3ff;
-}
-
-.dark ::-webkit-scrollbar-track {
-  background: #0f0117;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #ddd6fe;
-  border-radius: 10px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #4c1d95;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #c4b5fd;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #5b21b6;
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .glass {

@@ -35,7 +35,7 @@ const TechStack = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     initial={{ opacity: 0, y: 20 }}
                     viewport={{ once: true }}
-                    className="text-5xl md:text-8xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tighter"
+                    className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tighter"
                 >
                     Technical <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-500">Toolkit.</span>
                 </motion.h2>
@@ -44,32 +44,32 @@ const TechStack = () => {
                     initial={{ opacity: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
-                    className="text-slate-600 dark:text-slate-400 text-xl font-medium max-w-2xl mx-auto"
+                    className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto px-4"
                 >
                     Teknologi pilihan yang saya andalkan untuk membangun solusi digital berperforma tinggi.
                 </motion.p>
             </div>
 
-            <div className="flex flex-col gap-12 relative z-10">
+            <div className="flex flex-col gap-8 md:gap-12 relative z-10">
                 {/* Row 1: Left to Right */}
                 <div className="flex overflow-hidden">
                     <motion.div
                         animate={{ x: [0, -1000] }}
                         transition={{
-                            duration: 30,
+                            duration: 40, // Slower for readability
                             repeat: Infinity,
                             ease: "linear"
                         }}
-                        className="flex gap-8 whitespace-nowrap px-4"
+                        className="flex gap-4 md:gap-8 whitespace-nowrap px-4"
                     >
                         {row1.map((skill, i) => (
                             <div
                                 key={i}
-                                className="px-10 py-6 glass rounded-[2.5rem] border border-black/5 dark:border-white/5 flex items-center gap-5 group hover:border-purple-500/30 transition-all hover:scale-105 shadow-2xl relative overflow-hidden"
+                                className="px-6 py-4 md:px-10 md:py-6 glass rounded-2xl md:rounded-[2.5rem] border border-black/5 dark:border-white/5 flex items-center gap-3 md:gap-5 group hover:border-purple-500/30 transition-all hover:scale-105 shadow-2xl relative overflow-hidden"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                <img src={skill.icon} alt={skill.name} className="w-10 h-10 object-contain group-hover:rotate-12 transition-transform duration-500" />
-                                <span className="text-2xl font-black text-slate-700 dark:text-slate-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors uppercase tracking-widest italic">{skill.name}</span>
+                                <img src={skill.icon} alt={skill.name} className="w-6 h-6 md:w-10 md:h-10 object-contain group-hover:rotate-12 transition-transform duration-500" />
+                                <span className="text-lg md:text-2xl font-black text-slate-700 dark:text-slate-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors uppercase tracking-widest italic">{skill.name}</span>
                             </div>
                         ))}
                     </motion.div>
@@ -80,29 +80,29 @@ const TechStack = () => {
                     <motion.div
                         animate={{ x: [-1000, 0] }}
                         transition={{
-                            duration: 35,
+                            duration: 45, // Different speed for visual depth
                             repeat: Infinity,
                             ease: "linear"
                         }}
-                        className="flex gap-8 whitespace-nowrap px-4"
+                        className="flex gap-4 md:gap-8 whitespace-nowrap px-4"
                     >
                         {row2.map((skill, i) => (
                             <div
                                 key={i}
-                                className="px-10 py-6 glass rounded-[2.5rem] border border-black/5 dark:border-white/5 flex items-center gap-5 group hover:border-indigo-500/30 transition-all hover:scale-105 shadow-2xl relative overflow-hidden"
+                                className="px-6 py-4 md:px-10 md:py-6 glass rounded-2xl md:rounded-[2.5rem] border border-black/5 dark:border-white/5 flex items-center gap-3 md:gap-5 group hover:border-indigo-500/30 transition-all hover:scale-105 shadow-2xl relative overflow-hidden"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                <img src={skill.icon} alt={skill.name} className="w-10 h-10 object-contain group-hover:-rotate-12 transition-transform duration-500" />
-                                <span className="text-2xl font-black text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors uppercase tracking-widest italic">{skill.name}</span>
+                                <img src={skill.icon} alt={skill.name} className="w-6 h-6 md:w-10 md:h-10 object-contain group-hover:-rotate-12 transition-transform duration-500" />
+                                <span className="text-lg md:text-2xl font-black text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors uppercase tracking-widest italic">{skill.name}</span>
                             </div>
                         ))}
                     </motion.div>
                 </div>
             </div>
 
-            {/* Premium Masking */}
-            <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-white dark:from-[#0f0117] to-transparent z-20 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-white dark:from-[#0f0117] to-transparent z-20 pointer-events-none" />
+            {/* Premium Masking - Responsive width */}
+            <div className="absolute inset-y-0 left-0 w-20 md:w-64 bg-gradient-to-r from-white dark:from-[#0f0117] to-transparent z-20 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-20 md:w-64 bg-gradient-to-l from-white dark:from-[#0f0117] to-transparent z-20 pointer-events-none" />
         </section>
     );
 };

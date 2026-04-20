@@ -32,17 +32,17 @@ const Footer = () => {
                     <ArrowUpCircle className="w-10 h-10 transition-all relative z-10" />
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-12 items-center">
-                    <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
-                        <span className="text-4xl font-black text-purple-600 dark:text-purple-400 tracking-tighter uppercase whitespace-nowrap italic">
+                <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-12 items-center text-center lg:text-left">
+                    <div className="flex flex-col items-center lg:items-start gap-4">
+                        <span className="text-3xl md:text-4xl font-black text-purple-600 dark:text-purple-400 tracking-tighter uppercase whitespace-nowrap italic">
                             DARDCOR
                         </span>
-                        <p className="text-slate-500 text-xs max-w-xs leading-relaxed font-bold uppercase tracking-[0.2em]">
+                        <p className="text-slate-500 text-[10px] md:text-xs max-w-xs leading-relaxed font-bold uppercase tracking-[0.2em]">
                             Elevating Digital <span className="text-slate-900 dark:text-white">Experiences</span> through innovative code and design.
                         </p>
                     </div>
 
-                    <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[9px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.3em]">
+                    <div className="flex flex-wrap items-center justify-center gap-x-6 md:gap-x-8 gap-y-4 text-[8px] md:text-[9px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.3em]">
                         <a href="#home" className="hover:text-slate-900 dark:hover:text-white transition-colors">HOME</a>
                         <a href="#about" className="hover:text-slate-900 dark:hover:text-white transition-colors">ABOUT</a>
                         <a href="#skills" className="hover:text-slate-900 dark:hover:text-white transition-colors">SKILL</a>

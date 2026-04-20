@@ -34,7 +34,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         initial={{ opacity: 0, y: 20 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-8xl font-black text-slate-900 dark:text-white leading-tight"
+                        className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white leading-tight"
                     >
                         Let's <span className="text-purple-500">Connect.</span>
                     </motion.h2>
@@ -44,7 +44,7 @@ const Contact = () => {
                         initial={{ opacity: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-slate-600 dark:text-slate-400 text-xl max-w-2xl mx-auto font-medium"
+                        className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-medium px-4"
                     >
                         Siap mengubah ide brilian Anda menjadi kenyataan digital? Saya siap membantu.
                     </motion.p>
@@ -52,10 +52,10 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start text-left">
                     {/* Contact Info */}
-                    <div className="lg:col-span-5 space-y-10">
-                        <div className="space-y-4">
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white">Contact Information</h3>
-                            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                    <div className="lg:col-span-5 space-y-10 order-2 lg:order-1">
+                        <div className="space-y-4 px-4 md:px-0">
+                            <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white">Contact Information</h3>
+                            <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed">
                                 Jangan ragu untuk menghubungi saya melalui saluran berikut. Saya selalu terbuka untuk diskusi proyek baru atau sekadar menyapa.
                             </p>
                         </div>
@@ -65,22 +65,22 @@ const Contact = () => {
                                 <motion.div
                                     key={i}
                                     whileHover={{ x: 10 }}
-                                    className="flex items-center gap-6 p-6 glass rounded-3xl border border-black/5 dark:border-white/5 group transition-all"
+                                    className="flex items-center gap-4 md:gap-6 p-4 md:p-6 glass rounded-2xl md:rounded-3xl border border-black/5 dark:border-white/5 group transition-all"
                                 >
-                                    <div className={`p-4 rounded-2xl ${item.bg} ${item.color} group-hover:scale-110 transition-transform shadow-lg`}>
+                                    <div className={`p-3 md:p-4 rounded-xl md:rounded-2xl ${item.bg} ${item.color} group-hover:scale-110 transition-transform shadow-lg`}>
                                         {item.icon}
                                     </div>
-                                    <div>
-                                        <h4 className="text-slate-500 text-xs font-black uppercase tracking-widest mb-1">{item.title}</h4>
-                                        <p className="text-slate-900 dark:text-white text-lg font-bold group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">{item.value}</p>
+                                    <div className="min-w-0">
+                                        <h4 className="text-slate-500 text-[10px] md:text-xs font-black uppercase tracking-widest mb-1">{item.title}</h4>
+                                        <p className="text-slate-900 dark:text-white text-base md:text-lg font-bold group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors truncate">{item.value}</p>
                                     </div>
                                 </motion.div>
                             ))}
                         </div>
 
-                        <div className="space-y-6 p-8 glass rounded-[2.5rem] border border-black/5 dark:border-white/5 shadow-2xl">
-                            <h4 className="text-slate-900 dark:text-white font-black text-sm uppercase tracking-[0.3em]">Follow My Digital Journey</h4>
-                            <div className="flex gap-4">
+                        <div className="space-y-6 p-6 md:p-8 glass rounded-[2rem] md:rounded-[2.5rem] border border-black/5 dark:border-white/5 shadow-2xl">
+                            <h4 className="text-slate-900 dark:text-white font-black text-xs md:text-sm uppercase tracking-[0.3em] text-center md:text-left">Follow My Digital Journey</h4>
+                            <div className="flex justify-center md:justify-start gap-4">
                                 {socialPlatforms.map(({ Icon, link }, idx) => (
                                     <motion.a
                                         href={link}
@@ -89,9 +89,9 @@ const Contact = () => {
                                         key={idx}
                                         whileHover={{ y: -5, scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
-                                        className="p-4 glass rounded-2xl border border-black/5 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 hover:border-purple-500/50 shadow-xl transition-all"
+                                        className="p-3 md:p-4 glass rounded-xl md:rounded-2xl border border-black/5 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 hover:border-purple-500/50 shadow-xl transition-all"
                                     >
-                                        <Icon className="w-6 h-6" />
+                                        <Icon className="w-5 h-5 md:w-6 md:h-6" />
                                     </motion.a>
                                 ))}
                             </div>
@@ -103,43 +103,43 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 50 }}
                         viewport={{ once: true }}
-                        className="lg:col-span-7"
+                        className="lg:col-span-7 order-1 lg:order-2"
                     >
-                        <form className="p-10 md:p-14 glass rounded-[3rem] border border-black/5 dark:border-white/5 shadow-2xl space-y-10 relative">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <form className="p-6 md:p-14 glass rounded-[2rem] md:rounded-[3rem] border border-black/5 dark:border-white/5 shadow-2xl space-y-8 relative">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="space-y-4">
-                                    <label className="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] ml-2 text-left block">Full Name</label>
+                                    <label className="text-[10px] md:text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] ml-2 text-left block">Full Name</label>
                                     <input
                                         type="text"
                                         placeholder="Enter your name"
-                                        className="w-full px-8 py-5 rounded-[1.5rem] bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 focus:border-purple-500/50 focus:ring-4 focus:ring-purple-500/5 transition-all text-slate-900 dark:text-white outline-none font-bold placeholder:text-slate-400 dark:placeholder:text-slate-600 shadow-inner"
+                                        className="w-full px-6 py-4 md:px-8 md:py-5 rounded-2xl md:rounded-[1.5rem] bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 focus:border-purple-500/50 focus:ring-4 focus:ring-purple-500/5 transition-all text-slate-900 dark:text-white outline-none font-bold placeholder:text-slate-400 dark:placeholder:text-slate-600 shadow-inner"
                                     />
                                 </div>
                                 <div className="space-y-4">
-                                    <label className="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] ml-2 text-left block">Email Address</label>
+                                    <label className="text-[10px] md:text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] ml-2 text-left block">Email Address</label>
                                     <input
                                         type="email"
                                         placeholder="your@email.com"
-                                        className="w-full px-8 py-5 rounded-[1.5rem] bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 focus:border-purple-500/50 focus:ring-4 focus:ring-purple-500/5 transition-all text-slate-900 dark:text-white outline-none font-bold placeholder:text-slate-400 dark:placeholder:text-slate-600 shadow-inner"
+                                        className="w-full px-6 py-4 md:px-8 md:py-5 rounded-2xl md:rounded-[1.5rem] bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 focus:border-purple-500/50 focus:ring-4 focus:ring-purple-500/5 transition-all text-slate-900 dark:text-white outline-none font-bold placeholder:text-slate-400 dark:placeholder:text-slate-600 shadow-inner"
                                     />
                                 </div>
                             </div>
 
                             <div className="space-y-4">
-                                <label className="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] ml-2 text-left block">Your Message</label>
+                                <label className="text-[10px] md:text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] ml-2 text-left block">Your Message</label>
                                 <textarea
-                                    rows="5"
+                                    rows="4"
                                     placeholder="Tell me about your project..."
-                                    className="w-full px-8 py-6 rounded-[1.5rem] bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 focus:border-purple-500/50 focus:ring-4 focus:ring-purple-500/5 transition-all text-slate-900 dark:text-white outline-none font-bold placeholder:text-slate-400 dark:placeholder:text-slate-600 resize-none shadow-inner"
+                                    className="w-full px-6 py-4 md:px-8 md:py-6 rounded-2xl md:rounded-[1.5rem] bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 focus:border-purple-500/50 focus:ring-4 focus:ring-purple-500/5 transition-all text-slate-900 dark:text-white outline-none font-bold placeholder:text-slate-400 dark:placeholder:text-slate-600 resize-none shadow-inner"
                                 ></textarea>
                             </div>
 
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full py-6 bg-purple-500 text-white dark:text-white font-black rounded-[1.5rem] text-xl uppercase tracking-[0.2em] shadow-[0_20px_40px_rgba(168,85,247,0.3)] hover:bg-purple-600 transition-all flex items-center justify-center gap-4 group"
+                                className="w-full py-5 md:py-6 bg-purple-500 text-white dark:text-white font-black rounded-2xl md:rounded-[1.5rem] text-lg md:text-xl uppercase tracking-[0.2em] shadow-[0_20px_40px_rgba(168,85,247,0.3)] hover:bg-purple-600 transition-all flex items-center justify-center gap-4 group"
                             >
-                                Send Message <Send className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                Send Message <Send className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </motion.button>
                         </form>
                     </motion.div>
