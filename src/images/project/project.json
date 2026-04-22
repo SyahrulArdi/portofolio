@@ -8,5 +8,10 @@
         "title": "Starz-shop",
         "link": "https://louncher.github.io",
         "image": "project_2.png"
+    },
+    "project_3": {
+        "title": "Dardcor Agent",
+        "link": "https://github.com/Dardcor/Dardcor-Agent",
+        "image": "project_3.png"
     }
 }

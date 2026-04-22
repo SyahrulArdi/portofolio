@@ -8,9 +8,9 @@ const Experience = () => {
             company: 'Politeknik Elektronika Negeri Surabaya (PENS)',
             location: 'Surabaya, Indonesia',
             date: '2024 - Saat Ini',
-            desc: 'Sedang menempuh pendidikan tinggi di jurusan Teknik Informatika untuk menguasai teknologi perangkat lunak masa depan.',
+            desc: 'Sedang menempuh pendidikan tinggi di jurusan D3 Teknik Informatika',
             type: 'edu',
-            tasks: ['Mahasiswa Aktif', 'Teknik Informatika']
+            tasks: ['Mahasiswa Aktif', 'D3 Teknik Informatika']
         },
         {
             title: 'Teknisi Jaringan (Magang)',
