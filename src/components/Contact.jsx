@@ -137,7 +137,7 @@ const Contact = () => {
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full py-5 md:py-6 bg-purple-500 text-white dark:text-white font-black rounded-2xl md:rounded-[1.5rem] text-lg md:text-xl uppercase tracking-[0.2em] shadow-[0_20px_40px_rgba(168,85,247,0.3)] hover:bg-purple-600 transition-all flex items-center justify-center gap-4 group"
+                                className="w-full py-5 md:py-6 bg-gradient-to-r from-[#4a044e] to-[#2e1065] text-white dark:text-white font-black rounded-2xl md:rounded-[1.5rem] text-lg md:text-xl uppercase tracking-[0.2em] shadow-[0_20px_40px_rgba(74,4,78,0.3)] hover:shadow-[0_20px_50px_rgba(74,4,78,0.5)] transition-all flex items-center justify-center gap-4 group"
                             >
                                 Send Message <Send className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </motion.button>

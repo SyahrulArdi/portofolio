@@ -34,7 +34,7 @@ const Footer = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-12 items-center text-center lg:text-left">
                     <div className="flex flex-col items-center lg:items-start gap-4">
-                        <span className="text-3xl md:text-4xl font-black text-purple-600 dark:text-purple-400 tracking-tighter uppercase whitespace-nowrap italic">
+                        <span className="text-3xl md:text-4xl font-black tracking-tighter uppercase whitespace-nowrap italic text-[#4a044e] dark:text-[#a855f7] drop-shadow-[0_0_8px_rgba(74,4,78,0.6)] dark:drop-shadow-[0_0_10px_rgba(168,85,247,0.6)]">
                             DARDCOR
                         </span>
                         <p className="text-slate-500 text-[10px] md:text-xs max-w-xs leading-relaxed font-bold uppercase tracking-[0.2em]">

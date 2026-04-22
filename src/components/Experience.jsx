@@ -38,15 +38,6 @@ const Experience = () => {
             desc: 'Menyelesaikan pendidikan jenjang sekolah menengah pertama.',
             type: 'edu',
             tasks: ['Lulusan SMP']
-        },
-        {
-            title: 'Lulusan SDN Tropodo 1 Waru',
-            company: 'SDN Tropodo 1 Waru',
-            location: 'Sidoarjo, Indonesia',
-            date: '2010 - 2016',
-            desc: 'Menyelesaikan pendidikan jenjang sekolah dasar.',
-            type: 'edu',
-            tasks: ['Lulusan SD']
         }
     ];
 

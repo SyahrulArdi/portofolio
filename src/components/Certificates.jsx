@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Award, X, ChevronRight, ChevronLeft, ShieldCheck, Maximize2, Layers } from 'lucide-react';
+import { Award, X, ChevronRight, ShieldCheck, Calendar } from 'lucide-react';
 import certData from '../images/certificate/certificate.json';
 
 const getCertImage = (fileName) => {
@@ -11,17 +11,16 @@ const Certificates = () => {
     const [selectedGroup, setSelectedGroup] = useState(null);
     const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
-    const certificateGroups = Object.entries(certData).map(([key, fileName], index) => ({
+    const certificateGroups = Object.entries(certData).map(([key, data], index) => ({
         id: index + 1,
         title: key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-        issuer: index === 0 ? 'PT Garuda Telekomunikasi Indonesia' : 'Professional Certification',
-        year: '2023',
-        count: 1,
-        coverImage: getCertImage(fileName),
-        description: `Official digital credential for ${key.replace(/_/g, ' ')}. This certificate verifies the completion of specialized professional training.`,
+        issuer: data.description.split(' ').slice(1).join(' '),
+        year: data.description.split(' ')[0],
+        coverImage: getCertImage(data.image),
+        description: data.description,
         images: [
             {
-                src: getCertImage(fileName),
+                src: getCertImage(data.image),
                 title: key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
                 subtitle: 'Verified Achievement'
             }
@@ -109,22 +108,12 @@ const Certificates = () => {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-200/90 dark:from-[#0f0117] dark:via-[#0f0117]/40 via-slate-100/20 to-transparent" />
 
-                                    <div className="absolute top-4 right-4 md:top-8 md:right-8 flex gap-2">
-                                        <div className="px-3 py-1.5 md:px-4 md:py-2 glass rounded-full border border-black/5 dark:border-white/10 flex items-center gap-2">
-                                            <Layers className="w-3 h-3 md:w-4 md:h-4 text-purple-600 dark:text-purple-400" />
-                                            <span className="text-[10px] md:text-xs font-black text-slate-900 dark:text-white">{group.count} Items</span>
-                                        </div>
-                                    </div>
-
                                     <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 flex justify-between items-end">
                                         <div className="space-y-1 md:space-y-2 text-left">
                                             <p className="text-purple-600 dark:text-purple-400 text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">{group.issuer}</p>
                                             <h3 className="text-xl md:text-3xl font-black text-slate-900 dark:text-white leading-tight uppercase tracking-tighter group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                                                 {group.title}
                                             </h3>
-                                        </div>
-                                        <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-purple-500 flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.5)] group-hover:scale-110 transition-transform">
-                                            <Maximize2 className="w-5 h-5 md:w-7 md:h-7 text-white" />
                                         </div>
                                     </div>
                                 </div>
@@ -133,9 +122,9 @@ const Certificates = () => {
                                     <div className="flex items-center justify-between text-[10px] md:text-sm">
                                         <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 font-bold">
                                             <Award className="w-3 h-3 md:w-4 md:h-4 text-purple-600 dark:text-purple-400" />
-                                            {group.year} Digital Credential
+                                            {group.description}
                                         </div>
-                                        <span className="text-purple-600 dark:text-purple-400 font-black uppercase tracking-widest text-[9px] md:text-[10px]">Detail</span>
+                                        <span className="text-purple-600 dark:text-purple-400 font-black uppercase tracking-widest text-[9px] md:text-[10px] group-hover:underline">Detail</span>
                                     </div>
                                 </div>
                             </div>
@@ -151,35 +140,102 @@ const Certificates = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-slate-100/95 dark:bg-[#0f0117]/98 backdrop-blur-2xl overflow-y-auto"
+                        className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 bg-[#0f0117]/95 backdrop-blur-3xl overflow-y-auto"
                     >
-                        <motion.button
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
+                        {/* Close Button Overlay */}
+                        <div
+                            className="absolute inset-0 z-0 cursor-pointer"
                             onClick={() => setSelectedGroup(null)}
-                            className="fixed top-6 right-6 md:top-10 md:right-10 p-3 md:p-5 glass rounded-2xl border border-black/5 dark:border-white/10 text-slate-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 hover:border-purple-500 transition-all z-[110]"
-                        >
-                            <X className="w-6 h-6 md:w-8 md:h-8" />
-                        </motion.button>
+                        />
 
-                        <div className="relative w-full max-w-5xl flex flex-col items-center gap-8 py-20">
-                            <motion.div
-                                key={currentImgIndex}
-                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                                animate={{ opacity: 1, scale: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                                transition={{ type: 'spring', damping: 25, stiffness: 120 }}
-                                className="w-full relative shadow-[0_0_100px_rgba(168,85,247,0.15)] rounded-3xl md:rounded-[2.5rem] overflow-hidden glass border border-black/5 dark:border-white/10 group/modal"
-                            >
-                                <div className="flex items-center justify-center bg-black/5 dark:bg-black/20 overflow-hidden relative p-2 md:p-4">
-                                    <img
-                                        src={selectedGroup.images[currentImgIndex].src}
-                                        alt={selectedGroup.images[currentImgIndex].title}
-                                        className="w-full h-auto max-h-[70vh] md:max-h-[80vh] object-contain rounded-2xl md:rounded-[2rem] shadow-2xl transition-transform duration-700 hover:scale-[1.02]"
-                                    />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 50 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 50 }}
+                            transition={{ type: 'spring', damping: 25, stiffness: 150 }}
+                            className="relative z-10 w-full max-w-6xl bg-white dark:bg-[#1a0b2e] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_0_100px_rgba(139,92,246,0.3)] border border-white/10 flex flex-col lg:flex-row h-full max-h-[90vh]"
+                        >
+                            {/* Left Side: Image Viewer */}
+                            <div className="lg:w-2/3 bg-black/40 flex items-center justify-center p-4 md:p-12 relative group/viewer overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent pointer-events-none" />
+                                <motion.img
+                                    initial={{ opacity: 0, rotate: -2 }}
+                                    animate={{ opacity: 1, rotate: 0 }}
+                                    src={selectedGroup.images[currentImgIndex].src}
+                                    alt={selectedGroup.images[currentImgIndex].title}
+                                    className="w-full h-full object-contain rounded-xl md:rounded-3xl shadow-2xl relative z-10"
+                                />
+                                <button
+                                    onClick={() => setSelectedGroup(null)}
+                                    className="lg:hidden absolute top-6 right-6 p-3 bg-white/10 backdrop-blur-md rounded-full text-white"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+
+                            {/* Right Side: Content Details */}
+                            <div className="lg:w-1/3 p-8 md:p-14 flex flex-col justify-between bg-white dark:bg-[#1a0b2e] relative">
+                                <div className="absolute top-0 right-0 p-8 hidden lg:block">
+                                    <button
+                                        onClick={() => setSelectedGroup(null)}
+                                        className="p-4 glass rounded-2xl border border-black/5 dark:border-white/10 text-slate-400 hover:text-purple-500 hover:border-purple-500 transition-all"
+                                    >
+                                        <X className="w-6 h-6" />
+                                    </button>
                                 </div>
-                            </motion.div>
-                        </div>
+
+                                <div className="space-y-8">
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-3 px-4 py-1.5 w-fit glass rounded-full border border-purple-500/30 text-purple-600 dark:text-purple-400 text-[10px] font-black uppercase tracking-[0.2em]">
+                                            <ShieldCheck className="w-4 h-4" />
+                                            Verified Credential
+                                        </div>
+                                        <h3 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight uppercase tracking-tighter">
+                                            {selectedGroup.title}
+                                        </h3>
+                                    </div>
+
+                                    <div className="space-y-6">
+                                        <div className="flex gap-6 items-start">
+                                            <div className="p-3 bg-purple-500/10 rounded-2xl border border-purple-500/20">
+                                                <Award className="w-6 h-6 text-purple-500" />
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Issued By</p>
+                                                <p className="text-lg font-bold text-slate-800 dark:text-slate-200">{selectedGroup.issuer}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex gap-6 items-start">
+                                            <div className="p-3 bg-indigo-500/10 rounded-2xl border border-indigo-500/20">
+                                                <Calendar className="w-6 h-6 text-indigo-500" />
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Date Earned</p>
+                                                <p className="text-lg font-bold text-slate-800 dark:text-slate-200">{selectedGroup.year}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-purple-500/30 pl-6 py-2">
+                                        {selectedGroup.description}
+                                    </p>
+                                </div>
+
+                                <div className="pt-10 flex flex-col gap-4">
+                                    <a
+                                        href={selectedGroup.images[currentImgIndex].src}
+                                        download
+                                        className="w-full py-5 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl font-bold flex items-center justify-center gap-3 transition-all shadow-xl shadow-purple-500/20 hover:scale-[1.02] active:scale-95"
+                                    >
+                                        Download Certificate <ChevronRight className="w-5 h-5" />
+                                    </a>
+                                    <p className="text-[10px] text-center text-slate-500 dark:text-slate-500 font-medium uppercase tracking-widest">
+                                        ID: CERT-00{selectedGroup.id}-2026
+                                    </p>
+                                </div>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>

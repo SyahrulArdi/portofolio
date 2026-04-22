@@ -1,5 +1,14 @@
 {
-    "certificate_1": "certificate_1.png",
-    "certificate_2": "certificate_2.jpg",
-    "certificate_3": "certificate_3.jpg"
+    "certificate_1": {
+        "image": "certificate_1.png",
+        "description": "2023 PT GARUDA TELEKOMUNIKASI INDONESIA"
+    },
+    "certificate_2": {
+        "image": "certificate_2.jpg",
+        "description": "2025 POLITEKNIK ELEKTRONIKA NEGERI SURABAYA"
+    },
+    "certificate_3": {
+        "image": "certificate_3.jpg",
+        "description": "2024 H-TECH CORP"
+    }
 }

@@ -16,7 +16,7 @@ const LoadingScreen = () => {
             {/* Cinematic Background: Ambient breathing glow */}
             <div className="absolute inset-0 pointer-events-none">
                 <div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] h-[150vh] bg-[radial-gradient(circle_at_center,_rgba(76,29,149,0.25)_0%,_rgba(0,0,0,1)_60%)] animate-[pulseGlow_4s_ease-in-out_infinite]"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] h-[150vh] bg-[radial-gradient(circle_at_center,_rgba(74,4,78,0.25)_0%,_rgba(0,0,0,1)_60%)] animate-[pulseGlow_4s_ease-in-out_infinite]"
                     style={{ willChange: "transform, opacity", backfaceVisibility: "hidden" }}
                 ></div>
             </div>
@@ -32,9 +32,9 @@ const LoadingScreen = () => {
                     className="text-transparent bg-clip-text text-center font-black relative leading-none"
                     style={{
                         fontFamily: "'Inter', sans-serif",
-                        backgroundImage: "linear-gradient(to right, #6b21a8, #d946ef, #fb7185, #d946ef, #6b21a8)",
+                        backgroundImage: "linear-gradient(to right, #4a044e, #a855f7, #2e1065, #a855f7, #4a044e)",
                         backgroundSize: "200% auto",
-                        WebkitTextStroke: "1px rgba(255,255,255,0.1)",
+                        WebkitTextStroke: "1px rgba(168,85,247,0.2)",
                         animation: "textReveal 3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards, shimmer 3s linear infinite",
                         fontSize: "clamp(4rem, 18vw, 14rem)",
                         willChange: "transform, opacity, filter, letter-spacing, background-position",
@@ -47,7 +47,7 @@ const LoadingScreen = () => {
                     <span
                         className="absolute top-0 left-0 w-full h-full z-[-1] blur-[40px] opacity-0 animate-[shadowBloom_4s_cubic-bezier(0.2,0.8,0.2,1)_forwards] bg-clip-text text-transparent pointer-events-none"
                         style={{
-                            backgroundImage: "linear-gradient(to right, #6b21a8, #d946ef, #fb7185)",
+                            backgroundImage: "linear-gradient(to right, #4a044e, #a855f7, #4a044e)",
                             willChange: "transform, opacity, filter",
                             backfaceVisibility: "hidden"
                         }}
