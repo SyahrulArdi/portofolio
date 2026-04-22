@@ -22,15 +22,7 @@ const TechStack = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-purple-500/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 mb-20 text-center relative z-10">
-                <motion.div
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    viewport={{ once: true }}
-                    className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-purple-500/20 text-purple-600 dark:text-purple-400 text-[10px] font-black uppercase tracking-[0.4em] mb-8"
-                >
-                    <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
-                    Stack Capabilities
-                </motion.div>
+
                 <motion.h2
                     whileInView={{ opacity: 1, y: 0 }}
                     initial={{ opacity: 0, y: 20 }}

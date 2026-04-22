@@ -58,7 +58,7 @@ const Certificates = () => {
                         className="inline-flex items-center gap-3 px-6 py-2 glass rounded-full border border-black/5 dark:border-white/10 text-purple-600 dark:text-purple-400 font-black text-xs uppercase tracking-[0.4em] shadow-2xl"
                     >
                         <ShieldCheck className="w-5 h-5" />
-                        <span>Professional Validation</span>
+                        <span>Certification</span>
                     </motion.div>
 
                     <motion.h2
@@ -68,7 +68,7 @@ const Certificates = () => {
                         transition={{ delay: 0.1 }}
                         className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white tracking-tighter"
                     >
-                        Official <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-500">Credentials.</span>
+                        My <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-500">Certificate.</span>
                     </motion.h2>
 
                     <motion.p

@@ -4,31 +4,49 @@ import { Briefcase, GraduationCap, MapPin, Calendar, CheckCircle } from 'lucide-
 const Experience = () => {
     const experiences = [
         {
-            title: 'Senior Frontend Engineer',
-            company: 'Tech Innovations Corp.',
-            location: 'Jakarta, Indonesia',
-            date: 'Jan 2023 - Sekarang',
-            desc: 'Memimpin tim pengembangan frontend untuk membangun platfom SaaS berbasis AI dengan performa tinggi dan skalabilitas global.',
-            type: 'work',
-            tasks: ['Lider tim dari 5+ orang developer', 'Implementasi sistem desain modular', 'Optimasi performa aplikasi web']
-        },
-        {
-            title: 'UI/UX Designer & Web Developer',
-            company: 'Creative Studio X',
-            location: 'Yogyakarta, Indonesia',
-            date: 'Jun 2021 - Des 2022',
-            desc: 'Mendesain antarmuka pengguna yang intuitif dan mengelola seluruh siklus hidup pengembangan web untuk klien e-commerce.',
-            type: 'work',
-            tasks: ['Mendesain flow aplikasi logistik', 'Menulis kode frontend yang responsif', 'Integrasi API pihak ketiga']
-        },
-        {
-            title: 'Sarjana Teknik Informatika',
-            company: 'Universitas Indonesia',
-            location: 'Depok, Indonesia',
-            date: '2017 - 2021',
-            desc: 'Lulus dengan pujian (Cum Laude). Fokus pada rekayasa perangkat lunak dan sistem basis data terdistribusi.',
+            title: 'Teknik Informatika',
+            company: 'Politeknik Elektronika Negeri Surabaya (PENS)',
+            location: 'Surabaya, Indonesia',
+            date: '2024 - Saat Ini',
+            desc: 'Sedang menempuh pendidikan tinggi di jurusan Teknik Informatika untuk menguasai teknologi perangkat lunak masa depan.',
             type: 'edu',
-            tasks: ['IPK: 3.9/4.0', 'Ketua Himpunan Mahasiswa IT', 'Finalis Kompetisi Coding Nasional']
+            tasks: ['Mahasiswa Aktif', 'Teknik Informatika']
+        },
+        {
+            title: 'Teknisi Jaringan (Magang)',
+            company: 'PT GARUDA TELEKOMUNIKASI INDONESIA',
+            location: 'Indonesia',
+            date: '2023',
+            desc: 'Menjalankan program magang profesional selama 4 bulan sebagai Teknisi Jaringan, menangani infrastruktur telekomunikasi dan pemeliharaan sistem jaringan.',
+            type: 'work',
+            tasks: ['Network Technician', 'Maintenance Infrastruktur', 'Magang 4 Bulan']
+        },
+        {
+            title: 'Teknik Komputer dan Jaringan (TKJ)',
+            company: 'SMK Antartika 2 Sidoarjo',
+            location: 'Sidoarjo, Indonesia',
+            date: '2021 - 2024',
+            desc: 'Menyelesaikan pendidikan kejuruan dengan fokus pada instalasi jaringan, administrasi server, dan perangkat keras.',
+            type: 'edu',
+            tasks: ['Lulusan SMK', 'Keahlian TKJ']
+        },
+        {
+            title: 'Lulusan SMP Zainuddin Waru',
+            company: 'SMP Zainuddin Waru',
+            location: 'Sidoarjo, Indonesia',
+            date: '2017 - 2020',
+            desc: 'Menyelesaikan pendidikan jenjang sekolah menengah pertama.',
+            type: 'edu',
+            tasks: ['Lulusan SMP']
+        },
+        {
+            title: 'Lulusan SDN Tropodo 1 Waru',
+            company: 'SDN Tropodo 1 Waru',
+            location: 'Sidoarjo, Indonesia',
+            date: '2010 - 2016',
+            desc: 'Menyelesaikan pendidikan jenjang sekolah dasar.',
+            type: 'edu',
+            tasks: ['Lulusan SD']
         }
     ];
 
@@ -38,7 +56,7 @@ const Experience = () => {
                 <div className="flex flex-col items-center gap-4 text-center">
                     <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" />
                     <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight uppercase tracking-tight px-4">
-                        Riwayat <span className="text-purple-600 dark:text-purple-400">Kerja & Pendidikan</span>
+                        Pendidikan <span className="text-purple-600 dark:text-purple-400">& Pengalaman</span>
                     </h2>
                     <p className="max-w-2xl text-slate-600 dark:text-slate-400 text-sm md:text-base px-6">
                         Perjalanan profesional saya dalam membangun karier di bidang teknologi dan inovasi digital.
